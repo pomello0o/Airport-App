@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA68F147-4DC0-48B5-AEC4-285B937930A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AirportApp</RootNamespace>
+    <AssemblyName>AirportApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminChangePasswordForm.Designer.cs">
+      <DependentUpon>AdminChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreatePlaneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCreatePlaneForm.Designer.cs">
+      <DependentUpon>AdminCreatePlaneForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCreateStaffForm.Designer.cs">
+      <DependentUpon>AdminCreateStaffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFlightsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFlightsForm.Designer.cs">
+      <DependentUpon>AdminFlightsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFlightsPickCrewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFlightsPickCrewForm.Designer.cs">
+      <DependentUpon>AdminFlightsPickCrewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMainForm.Designer.cs">
+      <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPlanesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPlanesForm.Designer.cs">
+      <DependentUpon>AdminPlanesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminProfileForm.Designer.cs">
+      <DependentUpon>AdminProfileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRacesCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminRacesCreateForm.Designer.cs">
+      <DependentUpon>AdminRacesCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRacesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminRacesForm.Designer.cs">
+      <DependentUpon>AdminRacesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminsFlightsCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminsFlightsCreateForm.Designer.cs">
+      <DependentUpon>AdminsFlightsCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminStaffForm.Designer.cs">
+      <DependentUpon>AdminStaffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUsersChooseActionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUsersChooseActionForm.Designer.cs">
+      <DependentUpon>AdminUsersChooseActionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUsersManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUsersManage.Designer.cs">
+      <DependentUpon>AdminUsersManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AirportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AirportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AirportDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AirportDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AirportModel.cs" />
+    <Compile Include="AllowedCrewMemberModel.cs" />
+    <Compile Include="AllowedRaceModel.cs" />
+    <Compile Include="AllowedRaceModels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AllowedRaceModels.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crew.cs" />
+    <Compile Include="CrewMember.cs" />
+    <Compile Include="Encryption.cs" />
+    <Compile Include="Flight.cs" />
+    <Compile Include="Flights.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Flights.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FlightsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlightsForm.Designer.cs">
+      <DependentUpon>FlightsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhakiButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KhakiButton.Designer.cs">
+      <DependentUpon>KhakiButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206131441216_CreateUser.cs" />
+    <Compile Include="Migrations\202206131441216_CreateUser.designer.cs">
+      <DependentUpon>202206131441216_CreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206131500083_CreateSessions.cs" />
+    <Compile Include="Migrations\202206131500083_CreateSessions.designer.cs">
+      <DependentUpon>202206131500083_CreateSessions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206140746473_AddValidation.cs" />
+    <Compile Include="Migrations\202206140746473_AddValidation.designer.cs">
+      <DependentUpon>202206140746473_AddValidation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206141136155_UserEmailUnique.cs" />
+    <Compile Include="Migrations\202206141136155_UserEmailUnique.designer.cs">
+      <DependentUpon>202206141136155_UserEmailUnique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206141148407_AddAdminRole.cs" />
+    <Compile Include="Migrations\202206141148407_AddAdminRole.designer.cs">
+      <DependentUpon>202206141148407_AddAdminRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206141258479_FixSession.cs" />
+    <Compile Include="Migrations\202206141258479_FixSession.designer.cs">
+      <DependentUpon>202206141258479_FixSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206141332283_DropSession.cs" />
+    <Compile Include="Migrations\202206141332283_DropSession.designer.cs">
+      <DependentUpon>202206141332283_DropSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206141356190_AddBirthdayGenderToUser.cs" />
+    <Compile Include="Migrations\202206141356190_AddBirthdayGenderToUser.designer.cs">
+      <DependentUpon>202206141356190_AddBirthdayGenderToUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206141358121_EditBirthday.cs" />
+    <Compile Include="Migrations\202206141358121_EditBirthday.designer.cs">
+      <DependentUpon>202206141358121_EditBirthday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206141410449_FixBirthday.cs" />
+    <Compile Include="Migrations\202206141410449_FixBirthday.designer.cs">
+      <DependentUpon>202206141410449_FixBirthday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model.cs" />
+    <Compile Include="MyButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyButton.Designer.cs">
+      <DependentUpon>MyButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyDBInitializer.cs" />
+    <Compile Include="Plane.cs" />
+    <Compile Include="PlanesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanesForm.Designer.cs">
+      <DependentUpon>PlanesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileForm.Designer.cs">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Race.cs" />
+    <Compile Include="RacesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RacesForm.Designer.cs">
+      <DependentUpon>RacesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffForm.Designer.cs">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stewardess.cs" />
+    <Compile Include="TakenPlaceFlight.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserFlightsView.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserFlightsView.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminChangePasswordForm.resx">
+      <DependentUpon>AdminChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCreatePlaneForm.resx">
+      <DependentUpon>AdminCreatePlaneForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCreateStaffForm.resx">
+      <DependentUpon>AdminCreateStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFlightsForm.resx">
+      <DependentUpon>AdminFlightsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFlightsPickCrewForm.resx">
+      <DependentUpon>AdminFlightsPickCrewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMainForm.resx">
+      <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPlanesForm.resx">
+      <DependentUpon>AdminPlanesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminProfileForm.resx">
+      <DependentUpon>AdminProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminRacesCreateForm.resx">
+      <DependentUpon>AdminRacesCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminRacesForm.resx">
+      <DependentUpon>AdminRacesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminsFlightsCreateForm.resx">
+      <DependentUpon>AdminsFlightsCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminStaffForm.resx">
+      <DependentUpon>AdminStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUsersChooseActionForm.resx">
+      <DependentUpon>AdminUsersChooseActionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUsersManage.resx">
+      <DependentUpon>AdminUsersManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlightsForm.resx">
+      <DependentUpon>FlightsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhakiButton.resx">
+      <DependentUpon>KhakiButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206131441216_CreateUser.resx">
+      <DependentUpon>202206131441216_CreateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206131500083_CreateSessions.resx">
+      <DependentUpon>202206131500083_CreateSessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206140746473_AddValidation.resx">
+      <DependentUpon>202206140746473_AddValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206141136155_UserEmailUnique.resx">
+      <DependentUpon>202206141136155_UserEmailUnique.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206141148407_AddAdminRole.resx">
+      <DependentUpon>202206141148407_AddAdminRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206141258479_FixSession.resx">
+      <DependentUpon>202206141258479_FixSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206141332283_DropSession.resx">
+      <DependentUpon>202206141332283_DropSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206141356190_AddBirthdayGenderToUser.resx">
+      <DependentUpon>202206141356190_AddBirthdayGenderToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206141358121_EditBirthday.resx">
+      <DependentUpon>202206141358121_EditBirthday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206141410449_FixBirthday.resx">
+      <DependentUpon>202206141410449_FixBirthday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyButton.resx">
+      <DependentUpon>MyButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanesForm.resx">
+      <DependentUpon>PlanesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileForm.resx">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RacesForm.resx">
+      <DependentUpon>RacesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffForm.resx">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AirportDataSet.xsc">
+      <DependentUpon>AirportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AirportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AirportDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AirportDataSet.xss">
+      <DependentUpon>AirportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AirportDataSet1.xsc">
+      <DependentUpon>AirportDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AirportDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AirportDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AirportDataSet1.xss">
+      <DependentUpon>AirportDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AllowedRaceModels.xsc">
+      <DependentUpon>AllowedRaceModels.xsd</DependentUpon>
+    </None>
+    <None Include="AllowedRaceModels.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AllowedRaceModels.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AllowedRaceModels.xss">
+      <DependentUpon>AllowedRaceModels.xsd</DependentUpon>
+    </None>
+    <None Include="Flights.xsc">
+      <DependentUpon>Flights.xsd</DependentUpon>
+    </None>
+    <None Include="Flights.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Flights.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Flights.xss">
+      <DependentUpon>Flights.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="UserFlightsView.xsc">
+      <DependentUpon>UserFlightsView.xsd</DependentUpon>
+    </None>
+    <None Include="UserFlightsView.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserFlightsView.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserFlightsView.xss">
+      <DependentUpon>UserFlightsView.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plane.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
